@@ -1,0 +1,113 @@
+@import "elements.less";
+
+@margin: 30px;
+@base-color: rgba(0,0,0,.8);
+@circle-width: 300px;
+@circle-gutter:20px;
+
+
+body {
+  margin: 0;
+  padding: 0;
+  color: @base-color;
+  font-family: 'Work Sans', 'Avenir', sans-serif;
+  .user-select(none);
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+header {
+  position:absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 1;
+}
+
+//Intro
+.intro {
+  &.hidden {
+    display: none;
+  }
+}
+//Score
+.game-display {
+  background-color:#fff;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+
+  &.hidden {
+    display: none;
+  }
+}
+
+//Swatches
+.swatches, .swatch-background {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+}
+.swatch-background {
+  .transition(background-color, 0.5s);
+}
+
+.colorFrom,
+.colorTo {
+  cursor: pointer;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: @circle-width;
+  height: @circle-width;
+  .rounded(@circle-width);
+  .transition(background-color, 0.5s);
+  &:hover {
+    .transition(background-color, 0.5s);
+  }
+}
+
+.colorFrom, .colorTo {
+  .transition(transform, 0.15s);
+  &:hover {
+    .transition(transform, 0.15s);
+    .scale(1.05);
+  }
+}
+
+.colorFrom {
+  margin: -(@circle-width/2) 0 0 -(@circle-width + @circle-gutter);
+  z-index:2;
+}
+.colorTo {
+  margin: -(@circle-width/2) 0 0 @circle-gutter;
+  z-index:3;
+}
+
+
+
+
+
+
+//Footer
+footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+  p {
+    text-align: center;
+    font-weight: 400;
+    font-size: 14px;
+  }
+  a {
+    text-decoration: none;
+    color: rgb(254,67,101);
+    &:hover {
+      border-bottom: 1px solid rgb(254,67,101);
+    }
+  }
+}

@@ -1,0 +1,2 @@
+;; Analyzed by ClojureScript 0.0-3211
+{:cljs.analyzer/constants {:order [:intro? :points :colors :swatches], :seen #{:swatches :colors :points :intro?}}, :imports nil, :requires {re-frame.core re-frame.core}, :uses {register-sub re-frame.core}, :require-macros {reagent.ratom reagent.ratom}, :use-macros {reaction reagent.ratom}, :excludes #{}, :doc nil, :name chroma-game.subs}
